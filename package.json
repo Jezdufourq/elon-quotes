@@ -1,9 +1,18 @@
 {
   "name": "elon-quotes",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "eslint -c .eslintrc.json --fix",
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "license": "MIT",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-react": "^7.30.1",
     "express": "^4.18.1",
     "typescript": "^4.7.4"
   }
